@@ -1,21 +1,19 @@
 const express = require('express')
-const http = require("http");
-const bodyParser = require("body-parser");
-const app = express();
+const http = require('http')
+const bodyParser = require('body-parser')
+const app = express()
+const path = require('path')
+const httpServer = http.createServer(app)
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'))
 
-const httpServer = http.createServer(app);
-httpServer.listen(process.env.PORT || 3001);
-
-
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
-
-    const path = require("path");
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-    });
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
 }
+
+httpServer.listen(process.env.PORT || 3001)
