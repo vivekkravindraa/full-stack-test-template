@@ -1,0 +1,3 @@
+export const SET_VALUE = 'SET_VALUE';
+export const GET_COMMENTS = 'GET_COMMENTS';
+export const REMOVE_COMMENTS = 'REMOVE_COMMENTS';

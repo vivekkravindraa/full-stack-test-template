@@ -20,9 +20,15 @@
   },
   "homepage": "https://github.com/ktruo010/full-stack-test-template#readme",
   "dependencies": {
-    "concurrently": "^5.2.0",
+    "axios": "^0.21.1",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "eslint": "^7.11.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.7",
     "standard": "^14.3.4"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
   }
 }

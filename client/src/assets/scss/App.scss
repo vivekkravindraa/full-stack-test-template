@@ -1,0 +1,68 @@
+.appContainer {
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .boxContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .listContainer {
+            margin-top: 20px;
+            height: 420px;
+            min-width: 420px;
+            border: 1px solid #d3d3d3;
+            border-radius: 25px;
+            -moz-box-shadow:    3px 3px 5px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+            box-shadow:         3px 3px 5px 6px #ccc;
+            overflow-y: scroll;
+
+            & li {
+                margin-left: 40px;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .pullDataContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & button {
+            margin-top: 40px;
+            min-width: 120px;
+            border: 2px solid orange;
+            border-radius:  25px;
+            padding: 8px;
+            background: transparent;
+            outline: none !important;
+        }   
+    }
+
+    .removeContainer {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+
+        & input {
+            height: 26px;
+            width: 32px;
+            margin-right: 10px;
+        }
+
+        & button {
+            margin-top: 20px;
+            min-width: 120px;
+            border: 2px solid orange;
+            border-radius:  25px;
+            padding: 8px;
+            background: transparent;
+            outline: none !important;
+        }
+    }
+}
