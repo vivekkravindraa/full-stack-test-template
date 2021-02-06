@@ -6,7 +6,6 @@ import Button from './buliding-blocks/atoms/Button';
 
 import { bounce } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
-import logo from './assets/images/logo.png';
 
 import './assets/scss/App.scss';
 
@@ -51,7 +50,9 @@ const App = _ => {
       <StyleRoot>
         <div className="appContainer">
           <div className="imageContainer">
-            <img src={logo} alt="noImage" height="100" />
+            <svg width="100" height="100">
+              <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
           </div>
           <div className="boxContainer">
             {callRender(comments)}
